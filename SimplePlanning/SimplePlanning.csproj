@@ -61,8 +61,7 @@
     <Compile Include="Helpers\Configuration.cs" />
     <Compile Include="Helpers\Driver.cs" />
     <Compile Include="PageObjects\OverviewPage.cs" />
-    <Compile Include="PageObjects\SimplifiedPlanning.cs" />
-    <Compile Include="Steps\Overview.cs" />
+    <Compile Include="Steps\OverviewSteps.cs" />
     <Compile Include="TestData\JsonReader.cs" />
     <Compile Include="TestData\TestDataInfo.cs" />
     <Compile Include="Tests\Test.cs" />
@@ -75,7 +74,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="TestData\TestData.json" />
+    <None Include="TestData\TestData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

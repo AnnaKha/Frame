@@ -6,40 +6,42 @@ using OpenQA.Selenium.IE;
 
 namespace SimplePlanning.Helpers
 {
-	public class Driver
+    public enum Browsers
+    {
+        Chrome,
+        Firefox,
+        IE
+    }
+
+	public static class Driver
 	{
-		private static IWebDriver _instance;
+        private static IWebDriver _instance;
 
 		public static IWebDriver Instance
 		{
 			get
 			{
-				if (_instance == null)
-				{
-					Initialize();
-				}
-				return _instance;
+			    return _instance ?? Initialize();
 			}
 		}
 
-		private static void Initialize()
+		public static IWebDriver Initialize()
 		{
-			string browser = Configuration.Driver;
+			var browser = Configuration.BrowserName;
 
-			if (String.Equals(browser, "Chrome", StringComparison.CurrentCultureIgnoreCase))
-			{
-				_instance = new ChromeDriver();
-			}
-			else if (String.Equals(browser, "Firefox", StringComparison.CurrentCultureIgnoreCase))
-			{
-				_instance = new FirefoxDriver();
-			}
-			else if (String.Equals(browser, "InternetExplorer", StringComparison.CurrentCultureIgnoreCase))
-			{
-				_instance = new InternetExplorerDriver();
-			}
-			else
-				throw new Exception("unknown driver: " + browser);
+            var browserName = (Browsers)Enum.Parse(typeof(Browsers), browser);
+
+            switch (browserName)
+		    {
+                case Browsers.Chrome:
+                    return _instance = new ChromeDriver();
+                case Browsers.Firefox:
+                    return _instance = new FirefoxDriver();
+                case Browsers.IE:
+                    return _instance = new InternetExplorerDriver();
+                default:
+                    throw new Exception("Unknown driver: " + browser);
+            }
 		}
 
 		public static void GoToUrl(string url)
@@ -48,21 +50,13 @@ namespace SimplePlanning.Helpers
 			Instance.Manage().Window.Maximize();
 		}
 
-		public static void CloseBrowser()
-		{
-			if (_instance != null)
-			{
-				Instance.Close();
-			}
-			_instance = null;
-		}
-
 		public static void QuitBrowser()
 		{
 			if (_instance != null)
 			{
 				Instance.Quit();
 			}
+
 			_instance = null;
 		}
 	}

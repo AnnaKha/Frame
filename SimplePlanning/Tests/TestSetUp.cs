@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using NUnit.Framework.Internal;
-using OpenQA.Selenium.Remote;
-using SimplePlanning;
+﻿using NUnit.Framework;
 using SimplePlanning.Helpers;
 
 namespace SimplePlanning.Tests
@@ -16,8 +8,7 @@ namespace SimplePlanning.Tests
 		[SetUp]
 		public void SetUp()
 		{
-			string url = Configuration.Url;
-			Driver.GoToUrl(url);
+			Driver.Initialize();
 		}
 
 		[TearDown]

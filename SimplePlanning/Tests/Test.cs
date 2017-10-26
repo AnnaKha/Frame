@@ -1,33 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using SimplePlanning.PageObjects;
+using SimplePlanning.Helpers;
 using SimplePlanning.Steps;
+using SimplePlanning.TestData;
+using JsonReader = SimplePlanning.TestData.JsonReader;
 
 namespace SimplePlanning.Tests
 {
 	[TestFixture]
-
 	public class Test : TestSetUp
 	{
-		[Test]
+        private readonly OverviewSteps _overviewSteps = new OverviewSteps();
+	    private static readonly string Url = Configuration.Url;
+
+	    [Test]
 		public void OverviewPage()
 		{
-			Assert.That(SimplifiedPlanning.Overview.CurrentSituationHeading.Equals("Current Situation (Client Facts)"));
-			Assert.AreEqual(SimplifiedPlanning.Overview.GetModulesToComplete, new List<string> { "Goals"});
-			SimplifiedPlanning.Overview.GoToRetiremenPlanningPage();
-		}
+            _overviewSteps.OpenApplication(Url);
 
-		[Test]
-		public void GoalsPage()
-		{
+            _overviewSteps.Verify();
 
+            var jsonHelper = new JsonReader();
+            var jsonData = JsonConvert.DeserializeObject<List<TestDataInfo>>(jsonHelper.ReadFromFile(@"TestData\TestData.json"));
+
+            foreach (var dataInfo in jsonData)
+            {
+                var data = dataInfo;
+            }
 		}
 	}
 }

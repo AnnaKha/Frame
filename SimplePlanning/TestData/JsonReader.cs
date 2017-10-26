@@ -1,25 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Newtonsoft.Json;
+﻿using System.IO;
+using NUnit.Framework;
 
 namespace SimplePlanning.TestData
 {
 	public class JsonReader
 	{
-		public void LoadJson()
+		public string ReadFromFile(string pathToFile)
 		{
-			using (StreamReader r = new StreamReader("TestData.json"))
-			{
-				string json = r.ReadToEnd();
-				List<TestDataInfo> items = JsonConvert.DeserializeObject<List<TestDataInfo>>(json);
-			}
+		    var workingDerictory = TestContext.CurrentContext.TestDirectory;
+
+		    return File.ReadAllText(Path.Combine(workingDerictory, pathToFile));
 		}
 	}
 }
-
-
