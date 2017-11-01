@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using SimplePlanning.Helpers;
+using Core.Configuration;
 
 namespace SimplePlanning.Tests
 {
