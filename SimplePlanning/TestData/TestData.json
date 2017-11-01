@@ -5,7 +5,9 @@
   "CurrentSituationTitle":"Current Situation (Client Facts)",
   "ProposedPlanTitle":"Proposed Plan (Proposed Changes to Current Situation)",
   "GoalTile": "Goals(Required) Set Current Retirement, Education and Spending Facts",
-  "PlanningText": "Planning Adjust goals and apply techniques to your client’s facts. When you’re done creating new scenarios, you can select which one you’d like to move forward with and take action on. Complete the following modules to begin planning:",
+  "PlanningTitle": "Planning",
+  "PlanningText": "Adjust goals and apply techniques to your client’s facts. When you’re done creating new scenarios, you can select which one you’d like to move forward with and take action on.",
+  "ModulesText":"Complete the following modules to begin planning:",
   "ItemsToComplete":"Goals",
   }
 ]

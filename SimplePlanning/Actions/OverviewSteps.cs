@@ -34,11 +34,15 @@ namespace SimplePlanning.Actions
 			new JsonReader("OverviewPage", 0, pathToFile);
 			string proposedPlanTitle = JsonReader.testCaseValues["ProposedPlanTitle"];
 			string itemsToComplete = JsonReader.testCaseValues["ItemsToComplete"];
-			//string planningText = JsonReader.testCaseValues["PlanningText"];
+			string planningTitle = JsonReader.testCaseValues["PlanningTitle"];
+			string planningText = JsonReader.testCaseValues["PlanningText"];
+			string modulesText = JsonReader.testCaseValues["ModulesText"];
 
 			Assert.That(_overviewPage.ProposedPlanTitle.GetText.Equals(proposedPlanTitle));
-			//Assert.That(_overviewPage.PlanningSectionText.GetText.Equals(planningText));
+			Assert.That(_overviewPage.PlanningSectionTitle.GetText.Equals(planningTitle));
+			Assert.That(_overviewPage.PlanningSectionText.GetText.Equals(planningText));
+			Assert.That(_overviewPage.ModulesText.GetText.Equals(modulesText));
 			Assert.AreEqual(_overviewPage.ModulesToCompleteItems, new List<string> { itemsToComplete });
-	}
+		}
 	}
 }
