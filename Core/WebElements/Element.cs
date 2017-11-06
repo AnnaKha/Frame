@@ -1,4 +1,4 @@
-﻿using Core.Configuration;
+﻿using Core.DriverCore;
 using OpenQA.Selenium;
 
 namespace Core.WebElements
@@ -8,21 +8,9 @@ namespace Core.WebElements
 		private IWebElement _webElement;
 		public By Locator { get; protected set; }
 
-		public bool Enabled
-		{
-			get
-			{
-				return WebElement.Enabled;
-			}
-		}
+		public bool IsEnabled => WebElement.Enabled;
 
-		public bool Displayed
-		{
-			get
-			{
-				return WebElement.Displayed;
-			}
-		}
+		public bool IsDisplayed => WebElement.Displayed;
 
 		protected Element(By locator)
 		{

@@ -3,8 +3,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using Core.Configuration;
 
-namespace Core.Configuration
+namespace Core.DriverCore
 {
     public enum Browsers
     {

@@ -59,8 +59,8 @@
   <ItemGroup>
     <Compile Include="PageObjects\Common.cs" />
     <Compile Include="PageObjects\OverviewPage.cs" />
-    <Compile Include="Actions\OverviewSteps.cs" />
-    <Compile Include="Actions\Steps.cs" />
+    <Compile Include="Steps\OverviewSteps.cs" />
+    <Compile Include="Steps\Steps.cs" />
     <Compile Include="TestData\JsonReader.cs" />
     <Compile Include="TestData\TestDataInfo.cs" />
     <Compile Include="Tests\Test.cs" />

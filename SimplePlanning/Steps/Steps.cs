@@ -1,4 +1,4 @@
-﻿using Core.Configuration;
+﻿using Core.DriverCore;
 
 namespace SimplePlanning.Actions
 {
