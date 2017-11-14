@@ -4,7 +4,7 @@ using NUnit.Framework;
 using SimplePlanning.PageObjects;
 using SimplePlanning.TestData;
 
-namespace SimplePlanning.Actions
+namespace SimplePlanning.Steps
 {
 	public class OverviewSteps
 	{

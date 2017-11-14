@@ -12,6 +12,12 @@ namespace Core.WebElements
 
 		public bool IsDisplayed => WebElement.Displayed;
 
+		public string GetValue => WebElement.GetAttribute("value");
+
+		public void Child(By locator) => WebElement.FindElement(locator);
+
+		public void Children(By locator) => WebElement.FindElements(locator);
+
 		protected Element(By locator)
 		{
 			Locator = locator;

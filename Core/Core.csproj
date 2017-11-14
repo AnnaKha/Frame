@@ -60,7 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tables\RowBase.cs" />
     <Compile Include="Tables\TableBase.cs" />
-    <Compile Include="WebElements\Button.cs" />
+    <Compile Include="WebElements\ClickElement.cs" />
     <Compile Include="WebElements\Element.cs" />
     <Compile Include="WebElements\TextElement.cs" />
   </ItemGroup>

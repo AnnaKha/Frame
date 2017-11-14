@@ -11,7 +11,6 @@ namespace Core.Tables
 		{
 			_element = element;
 		}
-
 		protected string GetTdText(int cellIndex)
 		{
 			var elements = _element.FindElements(By.XPath(".//td"));

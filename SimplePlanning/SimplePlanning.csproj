@@ -58,10 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageObjects\Common.cs" />
+    <Compile Include="PageObjects\RetirementCurrentSavingsModal.cs" />
+    <Compile Include="PageObjects\RetirementPlanning.cs" />
     <Compile Include="PageObjects\OverviewPage.cs" />
     <Compile Include="Steps\OverviewSteps.cs" />
-    <Compile Include="Steps\Steps.cs" />
-    <Compile Include="Tables\RetirementRow.cs" />
+    <Compile Include="Steps\RetirementPlanningSteps.cs" />
+    <Compile Include="Steps\Step.cs" />
+    <Compile Include="Tables\CurrentSavingsRow.cs" />
+    <Compile Include="Tables\CurrentSavingsTable.cs" />
     <Compile Include="TestData\JsonReader.cs" />
     <Compile Include="TestData\TestDataInfo.cs" />
     <Compile Include="Tests\Test.cs" />

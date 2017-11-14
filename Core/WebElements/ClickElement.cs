@@ -2,9 +2,9 @@
 
 namespace Core.WebElements
 {
-	public class Button : Element
+	public class ClickElement : Element
 	{
-		public Button(By locator) : base(locator) { }
+		public ClickElement(By locator) : base(locator) { }
 		public void Click()
 		{
 			WebElement.Click();

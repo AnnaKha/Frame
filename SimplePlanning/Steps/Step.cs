@@ -1,11 +1,11 @@
 ﻿using Core.DriverCore;
 
-namespace SimplePlanning.Actions
+namespace SimplePlanning.Steps
 {
-	public class Steps
+	public class Step
 	{
 		public OverviewSteps OverviewPageStep { get; } = new OverviewSteps();
-
+		public RetirementPlanningSteps RetirementPlanningStep { get; } = new RetirementPlanningSteps();
 		public void OpenApplication(string url)
 		{
 			Driver.GoToUrl(url);
