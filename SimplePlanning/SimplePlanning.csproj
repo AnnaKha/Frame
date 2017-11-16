@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\ChartSettingsPopover.cs" />
     <Compile Include="PageObjects\Common.cs" />
     <Compile Include="PageObjects\RetirementCurrentSavingsModal.cs" />
     <Compile Include="PageObjects\RetirementPlanning.cs" />

@@ -10,7 +10,7 @@ namespace Core.Tables
 	{
 		protected abstract string Row { get; }
 
-		public IEnumerable<T> Rows => Driver.Instance.FindElements(By.XPath(Row)).Select(CreateInstance<T>).ToList();
+		public IList<T> Rows => Driver.Instance.FindElements(By.XPath(Row)).Select(CreateInstance<T>).ToList();
 
 		private TRow CreateInstance<TRow>(IWebElement element) where TRow : RowBase
 		{

@@ -7,8 +7,9 @@ namespace Core.Configuration
     {
         public static string BrowserName => GetRequiredString("BrowserName");
         public static string Url => GetRequiredString("Url");
+		public static string TestData => GetRequiredString("TestData");
 
-        private static string GetRequiredString(string name)
+		private static string GetRequiredString(string name)
         {
             var value = ConfigurationManager.AppSettings[name];
 

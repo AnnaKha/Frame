@@ -9,6 +9,18 @@
   "PlanningText": "Adjust goals and apply techniques to your client’s facts. When you’re done creating new scenarios, you can select which one you’d like to move forward with and take action on.",
   "ModulesText":"Complete the following modules to begin planning:",
   "ItemsToComplete":"Goals",
-  }
-]
+  }],
+  "CurrentSavings":[
+  {
+  "Columns" : "Accounts,Total",
+  "SavingsName1" :"Charles' 401k",
+  "SavingsName2" :"Savings",
+  "SavingsValue1": "$1,000",
+  "SavingsValue2": "$1,000",
+  "SavingsValue3": "$200",
+  "TotalName" : "Total",
+  "TotalValue":"$2,200",
+  "TableTitle" : "Current Savings",
+  "ModalName" : "Retirement"
+  }]
 }

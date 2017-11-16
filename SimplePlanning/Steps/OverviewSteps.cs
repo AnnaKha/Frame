@@ -3,6 +3,7 @@ using System.Threading;
 using NUnit.Framework;
 using SimplePlanning.PageObjects;
 using SimplePlanning.TestData;
+using Core.Configuration;
 
 namespace SimplePlanning.Steps
 {
@@ -10,13 +11,12 @@ namespace SimplePlanning.Steps
 	{
 		public Common _common = new Common();
 		private readonly OverviewPage _overviewPage = new OverviewPage();
-		private const string pathToFile = @"TestData\TestData.json";
-		private const string TestFile = "TestData.json";
+		private string pathToFile = Config.TestData;
 
 		public void GoToRetiremenPlanningPage()
 		{
 			_overviewPage.CreatePlan.Click();
-			Thread.Sleep(3000);
+			Thread.Sleep(2000);
 			_common.VerifyPageWithBackLinkHeader("Planning");
 		}
 
