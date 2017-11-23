@@ -69,7 +69,10 @@
     <Compile Include="Tables\RowBase.cs" />
     <Compile Include="Tables\TableBase.cs" />
     <Compile Include="WebElements\ClickElement.cs" />
+    <Compile Include="WebElements\ComponentsSteps\InputWithButtonsSteps.cs" />
     <Compile Include="WebElements\Element.cs" />
+    <Compile Include="WebElements\Components\Input.cs" />
+    <Compile Include="WebElements\Components\InputWithButtons.cs" />
     <Compile Include="WebElements\TextElement.cs" />
   </ItemGroup>
   <ItemGroup>

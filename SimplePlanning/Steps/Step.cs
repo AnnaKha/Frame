@@ -10,6 +10,5 @@ namespace SimplePlanning.Steps
 		{
 			Driver.GoToUrl(url);
 		}
-
 	}
 }

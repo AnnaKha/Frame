@@ -18,7 +18,6 @@ namespace Core.WebElements
 		public bool IsSelected => WebElement.Selected;
 
 		public string GetValue => WebElement.GetAttribute("value");
-
 		public void Child(By locator) => WebElement.FindElement(locator);
 
 		public void Children(By locator) => WebElement.FindElements(locator);
